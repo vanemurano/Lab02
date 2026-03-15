@@ -19,13 +19,15 @@ while(True):
             parola_da_cercare=input()
             t.handleTranslate(parola_da_cercare)
         elif int(txtIn) == 3:
-            pass
+            print("Ok, quale parola devo cercare?")
+            parola_wildcard = input()
+            t.handleWildCard(parola_wildcard)
         elif int(txtIn) == 4:
             print("Ecco il dizionario completo:")
             t.printTranslator()
         elif int(txtIn) == 5:
             break
         else:
-            print("Inserisci un numero compreso tra 1 e 5")
+            print("Inserisci un numero compreso tra 1 e 5!")
     except ValueError:
-        print("Inserisci un numero tra 1 e 5!")
+        print("Inserisci un numero compreso tra 1 e 5!")
